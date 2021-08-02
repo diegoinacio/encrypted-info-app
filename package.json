@@ -1,0 +1,23 @@
+{
+  "author": "Diego Inácio",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegoinacio/encrypted-info-app.git"
+  },
+  "scripts": {
+    "crypto": "node assets/scripts/index.js",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "chalk": "latest",
+    "enquirer": "latest",
+    "prettier": "latest"
+  }
+}
