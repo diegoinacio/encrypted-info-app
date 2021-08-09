@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+}
+
+#header {
+  position: relative;
+  padding: 2em;
+  background-color: black;
+}
+
+#header .author {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.2em;
+  color: white;
+}
+
+#forms {
+  padding: 1em;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  background-color: rgba(255, 128, 0, 0.2);
+}
+
+h3 {
+  background-color: rgba(0, 128, 255, 0.2);
+}
+
+h2,
+h3 {
+  padding-left: 0.5em;
+  margin-top: 0.5em;
+}
+
+form input {
+  margin: 0.5em 1em 0.5em 0;
+}
+
+section {
+  margin-left: 1em;
+}
+
+.key-type {
+  margin-left: 2em;
+}
+
+.key-div {
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.key-value {
+  margin-left: 1em;
+}
+
+#footer {
+  text-align: center;
+  margin: 2em;
+  color: gray;
+}
