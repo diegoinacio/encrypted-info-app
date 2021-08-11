@@ -21,10 +21,10 @@ function encrypt(word, key, step) {
   // * Encrypt each character
   return [].map
     .call(word, (e, i) => {
-      let key_e = key[i % n_key];
-      let indexA = SET.indexOf(e);
-      let indexB = SET.indexOf(key_e) + 1;
-      let indexC = (indexA + indexB + step) % N_SET;
+      const key_e = key[i % n_key];
+      const indexA = SET.indexOf(e);
+      const indexB = SET.indexOf(key_e) + 1;
+      const indexC = (indexA + indexB + step) % N_SET;
       return SET[indexC];
     })
     .join("");
@@ -40,9 +40,9 @@ function decrypt(word, key, step) {
   // * Decrypt each character
   return [].map
     .call(word, (e, i) => {
-      let key_e = key[i % n_key];
-      let indexA = SET.indexOf(e);
-      let indexB = SET.indexOf(key_e) + 1;
+      const key_e = key[i % n_key];
+      const indexA = SET.indexOf(e);
+      const indexB = SET.indexOf(key_e) + 1;
       let indexC = indexA - indexB - step;
       indexC = indexC < 0 ? N_SET + indexC : indexC;
       return SET[indexC];
@@ -61,7 +61,7 @@ function funcSelect(word, key, func, step) {
 function TransformObject(data, func, KEYS) {
   // ! Deep transformation of the input data
   // * copy data without reference
-  let dataCopy = JSON.parse(JSON.stringify(data));
+  const dataCopy = JSON.parse(JSON.stringify(data));
 
   // * Loop through all the levels
   KEYS.forEach((key) => {
@@ -69,7 +69,7 @@ function TransformObject(data, func, KEYS) {
       e1.section = funcSelect(e1.section, key, func, i + 1);
       for (const [j, e2] of e1.content.entries()) {
         e2.name = funcSelect(e2.name, key, func, i + j + 1);
-        for (let k = 0; k < e2.values.length; k++) {
+        for (const k = 0; k < e2.values.length; k++) {
           e2.values[k] = funcSelect(e2.values[k], key, func, i + j + k + 1);
         }
       }
