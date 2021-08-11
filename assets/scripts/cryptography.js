@@ -69,7 +69,7 @@ function TransformObject(data, func, KEYS) {
       e1.section = funcSelect(e1.section, key, func, i + 1);
       for (const [j, e2] of e1.content.entries()) {
         e2.name = funcSelect(e2.name, key, func, i + j + 1);
-        for (const k = 0; k < e2.values.length; k++) {
+        for (let k = 0; k < e2.values.length; k++) {
           e2.values[k] = funcSelect(e2.values[k], key, func, i + j + k + 1);
         }
       }
