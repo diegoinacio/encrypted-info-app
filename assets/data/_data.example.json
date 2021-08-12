@@ -1,0 +1,45 @@
+[
+  {
+    "section": "Password Manager",
+    "content": [
+      {
+        "name": "Master Key",
+        "values": ["password1manager2key"]
+      }
+    ]
+  },
+  {
+    "section": "Crypto Wallet",
+    "content": [
+      {
+        "name": "Secret Recovery Phrase",
+        "values": ["i have no phrase to put here"]
+      }
+    ]
+  },
+  {
+    "section": "Cloud Storage",
+    "content": [
+      {
+        "name": "Security Word List",
+        "values": [
+          "panda", "cupcake", "paper", 
+          "chocolate", "pillow", "sword", 
+          "knife", "ball", "address"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Another random example",
+    "content": [
+      {
+        "name": "Where my treasure chest is buried",
+        "values": [
+          "in my grandma garden close to the tree",
+          "the code for the keylock is 234"
+        ]
+      }
+    ]
+  }
+]
