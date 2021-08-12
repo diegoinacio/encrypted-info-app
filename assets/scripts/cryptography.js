@@ -11,6 +11,14 @@ SET += prc.SET.symbol ? `!#$%&*?@^~` : "";
 SET += prc.SET.number ? "0123456789" : "";
 const N_SET = SET.length;
 
+// ! Functions
+
+function cMod(n, m) {
+  // ! Custom mod
+  // ! Return always positive remainders
+  return ((n % m) + m) % m;
+}
+
 function encrypt(word, key, step) {
   // ! Encrypt word
   const n_key = key.length;
@@ -21,10 +29,10 @@ function encrypt(word, key, step) {
   // * Encrypt each character
   return [].map
     .call(word, (e, i) => {
-      const key_e = key[i % n_key];
       const indexA = SET.indexOf(e);
+      const key_e = key[i % n_key];
       const indexB = SET.indexOf(key_e) + 1;
-      const indexC = (indexA + indexB + step) % N_SET;
+      const indexC = cMod(indexA + indexB + step, N_SET);
       return SET[indexC];
     })
     .join("");
@@ -40,11 +48,10 @@ function decrypt(word, key, step) {
   // * Decrypt each character
   return [].map
     .call(word, (e, i) => {
-      const key_e = key[i % n_key];
       const indexA = SET.indexOf(e);
+      const key_e = key[i % n_key];
       const indexB = SET.indexOf(key_e) + 1;
-      let indexC = indexA - indexB - step;
-      indexC = indexC < 0 ? N_SET + indexC : indexC;
+      const indexC = cMod(indexA - indexB - step, N_SET);
       return SET[indexC];
     })
     .join("");
