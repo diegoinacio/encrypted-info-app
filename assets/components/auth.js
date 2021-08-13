@@ -3,10 +3,10 @@ function Auth(props) {
     const form = element.target.form;
     props.setAuthState(
       [
-        form.children[0].value === process.env.AUTH_TOKEN_00,
-        form.children[1].value === process.env.AUTH_TOKEN_01,
-        form.children[2].value === process.env.AUTH_TOKEN_02,
-        form.children[3].value === process.env.AUTH_TOKEN_03,
+        form.children[0].value === process.env.AUTH_TOKEN_01,
+        form.children[1].value === process.env.AUTH_TOKEN_02,
+        form.children[2].value === process.env.AUTH_TOKEN_03,
+        form.children[3].value === process.env.AUTH_TOKEN_04,
       ].every((e) => e)
     );
   }
