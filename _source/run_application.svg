@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 16" width="200px">
+    <defs>
+        <style>
+            .bg {
+                fill: black;
+            }
+
+            .text {
+                font-size: 7px;
+                fill: #fff;
+                font-family: CourierNewPS-BoldMT, Courier New;
+                font-weight: 700;
+            }
+        </style>
+    </defs>
+    <title>run_application</title>
+    <g id="button">
+        <rect class="bg" width="80" height="16" rx="6" />
+        <text class="text" text-anchor="middle" transform="translate(40 10)">> Run Application</text>
+    </g>
+</svg>
