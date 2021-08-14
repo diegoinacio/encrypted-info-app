@@ -6,6 +6,8 @@
 body {
   max-width: 800px;
   margin: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85em;
 }
 
 #header {
