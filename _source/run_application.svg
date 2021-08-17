@@ -1,21 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 16" width="200px">
-    <defs>
-        <style>
-            .bg {
-                fill: black;
-            }
+  <defs>
+    <style>
+      .bg {
+        fill: black;
+      }
 
-            .text {
-                font-size: 7px;
-                fill: #fff;
-                font-family: CourierNewPS-BoldMT, Courier New;
-                font-weight: 700;
-            }
-        </style>
-    </defs>
-    <title>run_application</title>
-    <g id="button">
-        <rect class="bg" width="80" height="16" rx="6" />
-        <text class="text" text-anchor="middle" transform="translate(40 10)">> Run Application</text>
-    </g>
+      .text {
+        font-size: 7px;
+        fill: #fff;
+        font-family: CourierNewPS-BoldMT, Courier New;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <title>run_application</title>
+  <g id="button">
+    <rect class="bg" width="80" height="16" rx="6" />
+    <text class="text" text-anchor="middle" transform="translate(7 10)">
+      >
+      <animateTransform attributeName="transform" attributeType="XML" type="translate" repeatCount="indefinite"
+        values="5 10; 9 10; 5 10; 9 10; 7 10; 7 10" keyTimes="0; 0.09; 0.1; 0.19; 0.2; 1" dur="2s" />
+    </text>
+    <text class="text" text-anchor="middle" transform="translate(44 10)">run application</text>
+  </g>
 </svg>
