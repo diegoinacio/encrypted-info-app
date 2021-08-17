@@ -6,7 +6,7 @@ This is a very simple application using [Next.js](https://nextjs.org/) and [Reac
 
 I chose [Vercel](https://vercel.com/) to host a [live demo](https://encrypted-info-app.vercel.app/) of this application. If you want to take a look, just visit the link below.
 
-[![run application](_source\run_application.svg)](https://encrypted-info-app.vercel.app/)
+[![run application](https://github.com/diegoinacio/encrypted-info-app/blob/master/_source\run_application.svg)](https://encrypted-info-app.vercel.app/)
 
 To make this experience a little bit more fun, I will give some tips to find out how to interact with the app on your own.
 
@@ -14,7 +14,7 @@ To make this experience a little bit more fun, I will give some tips to find out
 
 There are 4 _Auth Tokens_ that switch on the content accessability and visibility. The _Crypto Token_ form and all the information will be shown when all the tokens are filled rightly.
 
-![run application](_source\auth_tokens.gif)
+![run application](https://github.com/diegoinacio/encrypted-info-app/blob/master/_source\auth_tokens.gif)
 
 To find out what are the 4 auth tokens I registered for this demo, just run the code snippet below.
 
@@ -30,7 +30,7 @@ for (let i = 0; i < 4; i++) {
 
 The _Crypto Keys_ are the base for decryption logic of the information. As you put down the values in its form, you will notice that the content changes.
 
-![run application](_source\crypto_keys.gif)
+![run application](https://github.com/diegoinacio/encrypted-info-app/blob/master/_source\crypto_keys.gif)
 
 To figure out what are the 4 crypto keys I used to encrypt this demo, just find the answers the following sentences.
 
@@ -43,4 +43,4 @@ To figure out what are the 4 crypto keys I used to encrypt this demo, just find 
 
 If you have already found the crypto keys you actually decrypted this demo information. You may have noticed that all values are hidden despite being accessible by the copy button. To show them up just click on the happiest part of the page.
 
-![run application](_source\show_values.gif)
+![run application](https://github.com/diegoinacio/encrypted-info-app/blob/master/_source\show_values.gif)
