@@ -1,4 +1,4 @@
-# Encrypted Information
+# Encrypted Information Application
 
 This is a very simple application using [Next.js](https://nextjs.org/) and [React.js](https://reactjs.org/), which the main purpose is to provide access to personal encrypted information. The authentication is done with the _Auth Tokens_ and the encryption/decryption processes are elaborated by the use of multiple _Crypto Keys_.
 
@@ -44,3 +44,104 @@ To figure out what are the 4 crypto keys I used to encrypt this demo, just find 
 If you have already found the crypto keys you actually decrypted this demo information. You may have noticed that all values are hidden despite being accessible by the copy button. To show them up just click on the happiest part of the page.
 
 ![run application](https://github.com/diegoinacio/encrypted-info-app/blob/master/_source/show_values.gif)
+
+## Customizing the application
+
+First of all, clone this repository.
+
+```shell
+git clone https://github.com/diegoinacio/encrypted-info-app
+cd encrypted-info-app
+```
+
+Install all the dependencies. (you are supposed to already have NodeJS installed)
+
+```shell
+npm install
+```
+
+There are 3 files you have to edit to customize this application.
+
+### .local.env file
+
+Firstly, rename this file or create a new one called `.env`. Fill in the 4 _Auth Tokens_ as you want. Something like that:
+
+```
+AUTH_TOKEN_01="any token you want here"
+AUTH_TOKEN_02=####
+AUTH_TOKEN_03=####
+AUTH_TOKEN_04=####
+```
+
+Don't change the environment variables names. It must be just like in the `.local.env` file.
+
+If you want to publish your own version, please remember to check if the `.env` file is properly ignored by your deployment process. This information must be secret!
+
+### next.config.js file
+
+This file you have all the public runtime configuration so you can set before running the application.
+
+```javascript
+{
+  publicRuntimeConfig: {
+    // Number o crypto keys used to encrypt/decrypt
+    N_CRYPTO_KEYS: 4,
+    // * Character set for crypto keys
+    SET: {
+      upper: true,
+      lower: true,
+      symbol: true,
+      number: true,
+    },
+    AUTHOR: "Your name here",
+    TITLE: "Application title",
+  }
+  // ...
+};
+```
+
+### \_data.example.json file
+
+This is the most important file. In it you will include all the actual information you want to encrypt. This file is located in `assets\data\_data.example.json` and you have to rename this to `_data.json` before encrypting.
+
+The structure of the data is divided by sections. Each section can have one or more contents and each content can have one or more values. For example, consider you want to store your social media account information. You can have multiple contents for this, so you can include multiple information like _password_ and _secret recovery words_. In your `_data.json` it would contain:
+
+```json
+[
+  ...,
+  {
+    "section": "Social Media Name",
+    "content": [
+      {
+        "name": "Password",
+        "values": ["passwordOfSocialMedia"]
+      },
+      {
+        "name": "Secret Recovery Words",
+        "values": ["panda", "knife", "butter", "apple", ...]
+      }
+    ]
+  },
+  ...
+]
+```
+
+As you can imagine, the `_data.json` has all your sensitive information so keep it safe and remember to ignore it in your deployment process.
+
+## Encrypting your own information
+
+Having completed your `_data.json` it's time to encrypt this information. To encrypt your information just run:
+
+```shell
+npm run crypto
+```
+
+Select `Encrypt data` and include all the _Crypto Keys_ (memorize all of them). This process will change `data.json` in the `assets\data` directory. The `data.json` file contains the encrypted data used by the application.
+
+To run the application locally, run:
+
+```shell
+npm run dev
+```
+
+If you get any doubt, you can contact me 😄
