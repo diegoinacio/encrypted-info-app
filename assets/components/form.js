@@ -21,7 +21,11 @@ function Form() {
       KEYS.pop();
       const NV = VALUES.length;
       const NK = KEYS.length;
-      KEYS = KEYS.map((e, i) => VALUES.slice(i, i + 1 + NV - NK).join(""));
+      KEYS = KEYS.map((e, i) =>
+        VALUES.slice(i, i + 1 + NV - NK)
+          .reverse()
+          .join("")
+      );
     }
 
     setDataState(dataState_);
