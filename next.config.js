@@ -4,11 +4,17 @@ module.exports = {
     // * Number o crypto keys
     N_CRYPTO_KEYS: 4,
     // * Character set
-    SET: {
+    USE_SET: {
       upper: true,
       lower: true,
       symbol: true,
       number: true,
+    },
+    SET: {
+      upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      lower: "abcdefghijklmnopqrstuvwxyz",
+      symbol: `!#$%&*?@^~-`,
+      number: "0123456789",
     },
     // * Front matter
     AUTHOR: "Diego Inácio",
