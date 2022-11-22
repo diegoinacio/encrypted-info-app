@@ -5,10 +5,10 @@ const prc = require("../../next.config.js").publicRuntimeConfig;
 // ! Global Variables
 // * Character set
 let SET = " ";
-SET += prc.SET.upper ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ" : "";
-SET += prc.SET.lower ? "abcdefghijklmnopqrstuvwxyz" : "";
-SET += prc.SET.symbol ? `!#$%&*?@^~` : "";
-SET += prc.SET.number ? "0123456789" : "";
+SET += prc.USE_SET.upper ? prc.SET.upper : "";
+SET += prc.USE_SET.lower ? prc.SET.lower : "";
+SET += prc.USE_SET.symbol ? prc.SET.symbol : "";
+SET += prc.USE_SET.number ? prc.SET.number : "";
 const N_SET = SET.length;
 
 // ! Functions
